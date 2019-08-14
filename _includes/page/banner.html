@@ -9,9 +9,13 @@
     {% else %}
       <div class="container container--no-padding text--center">
         {% if page.banner.title-sup %}<h2 class="sub-title">{{page.banner.title-sup}}</h2>{% endif %}
-        <h1 class="banner-title">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
+        <div class="space--lg"></div>
+        <h1 class="banner-title {{page.banner.title-size}}">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
+        <div class="space--lg"></div>
         {% if page.banner.title-sub %}<h2 class="sub-title">{{page.banner.title-sub}}</h2>{% endif %}
       </div>
     {% endif %}
   </div>
 </div>
+
+{% include nav/site.html %}

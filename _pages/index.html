@@ -3,36 +3,57 @@ layout: default
 id: overview
 nav: true
 nav-order: 1
-title: Overview
-intro: this is my home page
+title: Übersicht
+
+banner:
+  title-sup: Sommerverlängerung in sagenhafter Natur
+  title:  Bayerischer Herbst
+  title-size: "banner-title--xl"
+  copyright: "© ..."
+
+intro: "Geheimnisvolle Wälder, bunte Natur, historische Städtchen und funkelnde Seen, eingerahmt von Bergketten. Ein Urlaub in Bayern lohnt sich auch im Herbst, denn das Wetter ist Ihnen meist noch wohlgesonnen und ermöglicht Wander- und Radtouren, Freizeitaktivitäten im Wald und auf dem Wasser, Stadtbummel in mittelalterlichen Kulissen sowie Biergartenbesuche und Weinproben in der einzigartigen Szenerie des Freistaates. Die sprichwörtliche bayerische Gemütlichkeit und der südliche Lifestyle runden Ihre Urlaubserholung hier ab. Folgen Sie uns auf eine Reise durch das herbstliche Bayern und lassen Sie sich inspirieren. "
+
 ---
 
+<div class=" vpad--xxl " >
+  <div class="container">
+    <div class="width width--lg text text--center text--normal text--xxl " >
+       <div class="text text--justify">{{page.intro}}</div>
+
+    </div>
+  </div>
+</div>
+
 <div class="container vpad--xxl">
+  {% assign destinations = site.html_pages | where: 'content-pages', 'true'  | sort:'nav-order' %}
 
-  <div class="title title--lg text--center">Bob layout</div>
 
-  <div class="space--lg"></div>
 
-  <div class="bob">
+  {% for destination in destinations %}
+
+  <div class="bob {% cycle '', 'bob--swap' %}">
     <div class="bob__img">
-      <a href="#image-link">
-        <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/img.jpg');"></div>
-      </a>
+      <a href="{{site.baseurl}}{{destination.url}}" class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{destination.id}}/hero.jpg');"></a>
     </div>
-    <div class="bob__text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam. Asperiores adipisci possimus inventore quia odit aliquam incidunt commodi iste explicabo dolore impedit consequuntur temporibus iusto dolor repudiandae at tempore repellendus, atque hic accusantium doloribus placeat. Dolores provident tempore molestias laborum ad repudiandae.</p>
+    <div class="bob__text ">
+      <div class="space--sm"></div>
+      <h2 class="title title--lg bv-subtitle-divider text--bold text--darkblue">{{destination.title}}</h2>
+      <div class="space--xxs"></div>
+      <p class="text text--lg">{{destination.summary}}</p>
+      <div class="space--lg"></div>
+        <a  href="{{site.baseurl}}{{destination.url}}"><span class="btn btn--blue">{{destination.cta}}</span></a>
+
     </div>
   </div>
-  <div class="bob bob--swap">
-    <div class="bob__img">
-      <a href="#image-link">
-        <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/img.jpg');"></div>
-      </a>
-    </div>
-    <div class="bob__text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam. Asperiores adipisci possimus inventore quia odit aliquam incidunt commodi iste explicabo dolore impedit consequuntur temporibus iusto dolor repudiandae at tempore repellendus, atque hic accusantium doloribus placeat. Dolores provident tempore molestias laborum ad repudiandae.</p>
-    </div>
-  </div>
+  {% for section in  page.destination-intros %}
+
+
+
+      <p class="text text--lg">{{section.summary}}</p>
+
+
+   {% endfor %}
+  {% endfor %}
 
 </div>
 
