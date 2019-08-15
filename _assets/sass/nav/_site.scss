@@ -3,7 +3,7 @@
 $site-nav-height:    56px;
 $site-nav-height-sm: 44px;
 $nav-width-bp:       640px;
-$nav-color:          $bv-blue;
+$nav-color:          $bv-red;
 
 
 // global site nav height
@@ -18,7 +18,7 @@ $nav-color:          $bv-blue;
 
 .site-nav {
   position: relative;
-  background-color: rgba($nav-color,.8);
+  background-color: rgba($nav-color,.9);
   text-align: center;
 
   // NEEDS EXPLAINING LIKE THE CORE NAV OFFSET

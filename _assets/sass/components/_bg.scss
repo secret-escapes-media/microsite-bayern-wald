@@ -4,6 +4,14 @@
   &--white { background-color: $white; }
   &--light { background-color: $grey-lightest; }
   &--dark  { background-color: $grey-dark; }
+  &--darkbrown  { background-color: $bv-darkbrown; }
+  &--brown  { background-color: $bv-brown; }
+  &--red  { background-color: $bv-red; }
+  &--yellow  { background-color: rgba($bv-yellow, .4); }
+  &--yellow-light  { background-color: rgba($bv-yellow, .2); }
+  &--cinnamon  { background-color: rgba($bv-cinnamon, .3); }
+  &--cinnamon-light  { background-color: rgba($bv-cinnamon, .2); }
+  &--green  { background-color: $bv-green; }
   &--img   { @include background-attributes; }
   &__fixed {
     position: fixed;

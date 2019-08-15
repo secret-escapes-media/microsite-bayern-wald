@@ -10,10 +10,10 @@ description: >
 
 # file paths
 url:     "http://mp.secretescapes.com" # the base hostname & protocol for your site
-baseurl: "/de/bayern-wald" # the subpath of your site, e.g. /blog/
-img:     "/de/bayern-wald/_assets/img"
-css:     "/de/bayern-wald/_assets/css"
-js:      "/de/bayern-wald/_assets/js"
+baseurl: "/de/bayern-herbst" # the subpath of your site, e.g. /blog/
+img:     "/de/bayern-herbst/_assets/img"
+css:     "/de/bayern-herbst/_assets/css"
+js:      "/de/bayern-herbst/_assets/js"
 
 
 # Build settings

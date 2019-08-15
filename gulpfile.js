@@ -27,7 +27,7 @@ function browserSyncServe() {
     server: {
       baseDir: '_site/',
       routes: {
-        '/de/bayern-wald': '_site/'
+        '/de/bayern-herbst': '_site/'
       }
     }
   });

@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="site-header__offset"></div>
-  <div class="banner__bg" style="background-image: url('{{site.img}}/img.jpg')"></div>
+  <div class="banner__bg bv-parallax" style="background-image: url('{{site.img}}/content/{{page.id}}/hero.jpg'); {{page.banner.bg-pos}}"></div>
   <div class="banner__wrap">
     {% if page.banner.content %}
       {{page.banner.content | liquify}}
@@ -9,13 +9,16 @@
     {% else %}
       <div class="container container--no-padding text--center">
         {% if page.banner.title-sup %}<h2 class="sub-title">{{page.banner.title-sup}}</h2>{% endif %}
-        <div class="space--lg"></div>
+        <div class="space--md"></div>
         <h1 class="banner-title {{page.banner.title-size}}">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
-        <div class="space--lg"></div>
+        <div class="space--sm"></div>
         {% if page.banner.title-sub %}<h2 class="sub-title">{{page.banner.title-sub}}</h2>{% endif %}
       </div>
+      <div class="text text--md text--white bv-copyright--bottom" >{{page.banner.copyright}}</div>
     {% endif %}
   </div>
+  <div class="banner__nav">
+    {% include nav/site.html %}
+  </div>
+  <div class="site-nav__offset"></div>
 </div>
-
-{% include nav/site.html %}

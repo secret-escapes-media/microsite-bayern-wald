@@ -17,6 +17,9 @@
   &--blue { background-color: $bv-blue;
     &:hover { background-color: rgba($bv-blue, .8); }
   }
+  &--red { background-color: $bv-red;
+    &:hover { background-color: rgba($bv-red, .8); }
+  }
   &--orange { background-color: $orange;
     &:hover { background-color: $orange-dark; }
   }

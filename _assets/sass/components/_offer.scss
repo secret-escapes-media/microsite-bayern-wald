@@ -9,6 +9,7 @@ $offer-max-width: 600px;
   max-width: $offer-max-width;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 0 10px rgba($bv-brown, .2);
   &__link {
     position: absolute;
     top: 0;
@@ -32,9 +33,10 @@ $offer-max-width: 600px;
   }
   &__content {
     padding: $s2;
-    border-left: 1px solid $grey-lighter;
+
+    /*border-left: 1px solid $grey-lighter;
     border-right: 1px solid $grey-lighter;
-    border-bottom: 1px solid $grey-lighter;
+    border-bottom: 1px solid $grey-lighter;*/
     background-color: $white;
   }
   &__location {

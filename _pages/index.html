@@ -6,73 +6,45 @@ nav-order: 1
 title: Übersicht
 
 banner:
-  title-sup: Sommerverlängerung in sagenhafter Natur
+  title-sup: Sommerver&shy;längerung in sagenhafter&nbsp;Natur
   title:  Bayerischer Herbst
   title-size: "banner-title--xl"
   copyright: "© ..."
 
-intro: "Geheimnisvolle Wälder, bunte Natur, historische Städtchen und funkelnde Seen, eingerahmt von Bergketten. Ein Urlaub in Bayern lohnt sich auch im Herbst, denn das Wetter ist Ihnen meist noch wohlgesonnen und ermöglicht Wander- und Radtouren, Freizeitaktivitäten im Wald und auf dem Wasser, Stadtbummel in mittelalterlichen Kulissen sowie Biergartenbesuche und Weinproben in der einzigartigen Szenerie des Freistaates. Die sprichwörtliche bayerische Gemütlichkeit und der südliche Lifestyle runden Ihre Urlaubserholung hier ab. Folgen Sie uns auf eine Reise durch das herbstliche Bayern und lassen Sie sich inspirieren. "
+intro: "Geheimnisvolle Wälder, bunte Natur, historische Städtchen und funkelnde Seen, eingerahmt von Bergketten. Ein Urlaub in Bayern lohnt sich auch im Herbst, denn das Wetter ist Ihnen meist noch wohl&shy;gesonnen und ermöglicht Wander- und Radtouren, Freizeit&shy;aktivitäten im Wald und auf dem Wasser, Stadtbummel in mittel&shy;alter&shy;lichen Kulissen sowie Bier&shy;garten&shy;besuche und Wein&shy;proben in der einzig&shy;artigen Szenerie des Freistaates. Die sprichwörtliche bayerische Gemütlichkeit und der südliche Lifestyle runden Ihre Urlaubs&shy;erholung hier ab. Folgen Sie uns auf eine Reise durch das herbstliche Bayern und lassen Sie sich inspirieren. "
 
 ---
 
-<div class=" vpad--xxl " >
-  <div class="container">
-    <div class="width width--lg text text--center text--normal text--xxl " >
-       <div class="text text--justify">{{page.intro}}</div>
-
+<div class="text--white bv-parallax" style="background-image: url('{{site.img}}/content/{{page.id}}/hero.jpg'); {{page.banner.bg-pos}}"  >
+  <div class="bv-transbox">
+    <div class="container vpad--xl ">
+      <div class="width width--xl text text--center text--normal text--xxl " >
+         <div class="text text--justify text--white">{{page.intro}}</div>
+         <div class="space--sm"></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container vpad--xxl">
   {% assign destinations = site.html_pages | where: 'content-pages', 'true'  | sort:'nav-order' %}
-
-
-
   {% for destination in destinations %}
-
+<div class="vpad--xl {% cycle 'bg--cinnamon', 'bob--swap bg--cinnamon-light' %}">
+<div class="container">
   <div class="bob {% cycle '', 'bob--swap' %}">
-    <div class="bob__img">
-      <a href="{{site.baseurl}}{{destination.url}}" class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{destination.id}}/hero.jpg');"></a>
+    <div class="bob__img" style="">
+      <a href="{{site.baseurl}}{{destination.url}}" class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{destination.id}}/hero.jpg'); "></a>
     </div>
-    <div class="bob__text ">
+    <div class="bob__text text--darkbrown">
       <div class="space--sm"></div>
-      <h2 class="title title--lg bv-subtitle-divider text--bold text--darkblue">{{destination.title}}</h2>
+      <h2 class="title title--lg text--bold ">{{destination.title}}</h2>
       <div class="space--xxs"></div>
       <p class="text text--lg">{{destination.summary}}</p>
       <div class="space--lg"></div>
-        <a  href="{{site.baseurl}}{{destination.url}}"><span class="btn btn--blue">{{destination.cta}}</span></a>
+      <a href="{{site.baseurl}}{{destination.url}}" class=" btn btn--red" target="_blank">{{destination.cta}}</a>
+
 
     </div>
   </div>
-  {% for section in  page.destination-intros %}
-
-
-
-      <p class="text text--lg">{{section.summary}}</p>
-
-
-   {% endfor %}
+</div>
+</div>
   {% endfor %}
-
-</div>
-
-<div class="title title--lg vpad--lg text--center">Harvey layout</div>
-
-<div class="harvey">
-  <div class="harvey__img" style="background-image: url({{site.img}}/img.jpg);">
-    <a class="harvey__link" href="#image-link"></a>
-  </div>
-  <div class="harvey__text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam. Asperiores adipisci possimus inventore quia odit aliquam incidunt commodi iste explicabo dolore impedit consequuntur temporibus iusto dolor repudiandae at tempore repellendus, atque hic accusantium doloribus placeat. Dolores provident tempore molestias laborum ad repudiandae.</p>
-  </div>
-</div>
-
-<div class="harvey harvey--swap">
-  <div class="harvey__img" style="background-image: url({{site.img}}/img.jpg);">
-    <a class="harvey__link" href="#image-link"></a>
-  </div>
-  <div class="harvey__text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam. Asperiores adipisci possimus inventore quia odit aliquam incidunt commodi iste explicabo dolore impedit consequuntur temporibus iusto dolor repudiandae at tempore repellendus, atque hic accusantium doloribus placeat. Dolores provident tempore molestias laborum ad repudiandae.</p>
-  </div>
-</div>
