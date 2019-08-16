@@ -3,6 +3,7 @@
 .text {
   font-family: $font-title-02;
   // sizes
+  &--xxxl { font-size: 1.5rem; line-height: 1.4; letter-spacing: 0; }
   &--xxl { font-size: 1.3rem; line-height: 1.4; letter-spacing: 0; }
   &--xl  { font-size: 1.2rem; line-height: 1.4; letter-spacing: 0; }
   &--lg  { font-size: 1.1rem; letter-spacing: 0; }
@@ -21,6 +22,7 @@
   // colours
   &--white { color: $grey-lightest; }
   &--black { color: $grey-dark; }
+  &--grey { color: $grey-light; }
   &--blue { color: $bv-blue; }
   &--darkblue { color: $bv-darkblue; }
   &--darkbrown { color: $bv-darkbrown; }

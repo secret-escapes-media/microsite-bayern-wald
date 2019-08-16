@@ -15,32 +15,30 @@ intro: "Geheimnisvolle Wälder, bunte Natur, historische Städtchen und funkelnd
 
 ---
 
-<div class="text--white bv-parallax" style="background-image: url('{{site.img}}/content/{{page.id}}/hero.jpg'); {{page.banner.bg-pos}}"  >
-  <div class="bv-transbox">
+<div class="bg--darkblue text--white" >
     <div class="container vpad--xl ">
-      <div class="width width--xl text text--center text--normal text--xxl " >
+      <div class="width width--xl text text--center text--normal text--xxl">
          <div class="text text--justify text--white">{{page.intro}}</div>
          <div class="space--sm"></div>
       </div>
     </div>
-  </div>
 </div>
 
   {% assign destinations = site.html_pages | where: 'content-pages', 'true'  | sort:'nav-order' %}
   {% for destination in destinations %}
-<div class="vpad--xl {% cycle 'bg--cinnamon', 'bob--swap bg--cinnamon-light' %}">
+<div class="vpad--xl {% cycle '', 'bob--swap bg--light' %}">
 <div class="container">
   <div class="bob {% cycle '', 'bob--swap' %}">
     <div class="bob__img" style="">
-      <a href="{{site.baseurl}}{{destination.url}}" class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{destination.id}}/hero.jpg'); "></a>
+      <a href="{{site.baseurl}}{{destination.url}}" class="bg-img bg-img--4-3 bv-box-shadow" style="background-image: url('{{site.img}}/content/{{destination.id}}/hero.jpg'); "></a>
     </div>
     <div class="bob__text text--darkbrown">
       <div class="space--sm"></div>
-      <h2 class="title title--lg text--bold ">{{destination.title}}</h2>
+      <h2 class="title title--lg text--bold text--darkblue bv-subtitle-divider">{{destination.title}}</h2>
       <div class="space--xxs"></div>
       <p class="text text--lg">{{destination.summary}}</p>
       <div class="space--lg"></div>
-      <a href="{{site.baseurl}}{{destination.url}}" class=" btn btn--red" target="_blank">{{destination.cta}}</a>
+      <a href="{{site.baseurl}}{{destination.url}}" class=" btn btn--blue" target="_blank">{{destination.cta}}</a>
 
 
     </div>

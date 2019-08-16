@@ -28,6 +28,15 @@
   margin-left: 10px;
 }
 
+.bv-map-pin::before{
+  //display: block;
+  content: url(../img/icons/map-pin-blue.svg);
+  margin-right: 5px;
+  line-height: 3;
+  //width: 15px;
+}
+
+
 
 .bv-copyright{
 
@@ -112,13 +121,6 @@
 
 }
 
-.bv-transbox {
-  //margin: 30px;
-  background-color: $bv-darkbrown;
-  opacity: 0.85;
-  filter: alpha(opacity=85); /* For IE8 and earlier */
-}
-
 
 @media only screen and (max-width: 1024px) {
 
@@ -134,7 +136,9 @@
   }
 }
 
-
+.bv-box-shadow{
+  box-shadow: 0 0 20px rgba($black, .2);
+}
 
 /* ==========================================================================
   Flight tag - Offers
