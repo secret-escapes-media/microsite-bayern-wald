@@ -37,6 +37,7 @@
   // element styles
   &__text,
   &__img {
+    position: relative;
     width: 100%;
     max-width: $lg;
     @include bp($bp) {

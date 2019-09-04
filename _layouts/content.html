@@ -16,7 +16,9 @@ layout: default
 {% for section in  page.sections.items %}
     <div id="{{section.id}}" class="harvey {% cycle 'bg--light', 'harvey--swap' %}">
       <div class="harvey__img" style="background-image: url('{{site.img}}/content/{{page.id}}/{{section.id}}.jpg');">
+        {% if section.credit %}
         <div class="text text--sm text--white text--normal bv-copyright--bottom" >{{section.credit}}</div>
+          {% endif %}
       </div>
       <div class="harvey__text boxpad--lg text text--xxl text--justify">
       {% if section.location %}
@@ -27,7 +29,7 @@ layout: default
         <p>{{section.description}}</p>
         {% if section.url %}
         <div class="space--xl"></div>
-          <a href="{{section.url}}" class=" btn btn--blue" target="_blank"> Mehr erfahren</a>
+          <a href="{{section.url}}" class=" btn btn--blue"> Mehr erfahren</a>
           {% endif %}
       </div>
     </div>

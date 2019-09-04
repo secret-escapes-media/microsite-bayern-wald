@@ -14,7 +14,8 @@
         <div class="space--sm"></div>
         {% if page.banner.title-sub %}<h2 class="sub-title">{{page.banner.title-sub}}</h2>{% endif %}
       </div>
-      <div class="text text--md text--white bv-copyright--bottom" >{{page.banner.copyright}}</div>
+
+      {% if page.banner.copyright %}<div class="text text--md text--white bv-copyright--bottom" >{{page.banner.copyright}}</div>{% endif %}
     {% endif %}
   </div>
   <div class="banner__nav">

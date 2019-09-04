@@ -3,13 +3,14 @@ layout: default
 id: overview
 nav: true
 nav-order: 1
-title: Übersicht
+nav-title: "Überblick"
+title: Sommerver&shy;längerung in sagenhafter&nbsp;Natur
 
 banner:
   title-sup: Sommerver&shy;längerung in sagenhafter&nbsp;Natur
   title:  Bayerischer Herbst
   title-size: "banner-title--xl"
-  copyright: "© ..."
+  copyright: "© Gert Krautbauer"
 
 intro: "Geheimnisvolle Wälder, historische Städtchen, bunte Weinberge und funkelnde Seen, eingerahmt von Bergketten. Ein Urlaub in Bayern lohnt sich auch im Herbst, denn das Wetter ist Ihnen meist noch wohlgesonnen und ermöglicht Wander- und Radtouren, Freizeitaktivitäten im Wald und auf dem Wasser, Stadtbummel in mittelalterlichen Kulissen sowie Biergartenbesuche und Weinproben in der einzigartigen Szenerie des Freistaates. Die sprichwörtliche bayerische Gemütlichkeit und der südliche Lifestyle runden Ihre Urlaubserholung hier ab. Folgen Sie uns auf eine Reise durch das herbstliche Bayern und lassen Sie sich inspirieren."
 
@@ -30,7 +31,11 @@ intro: "Geheimnisvolle Wälder, historische Städtchen, bunte Weinberge und funk
 <div class="container">
   <div class="bob {% cycle '', 'bob--swap' %}">
     <div class="bob__img" style="">
+      {% if destination.banner.copyright %}
+      <div class="text text--sm text--white text--normal bv-copyright" style="" >{{destination.banner.copyright}}</div>
+        {% endif %}
       <a href="{{site.baseurl}}{{destination.url}}" class="bg-img bg-img--4-3 " style="background-image: url('{{site.img}}/content/{{destination.id}}.jpg'); "></a>
+
     </div>
     <div class="bob__text text--darkbrown">
       <div class="space--sm"></div>
@@ -38,7 +43,7 @@ intro: "Geheimnisvolle Wälder, historische Städtchen, bunte Weinberge und funk
       <div class="space--xxs"></div>
       <p class="text text--lg">{{destination.summary}}</p>
       <div class="space--lg"></div>
-      <a href="{{site.baseurl}}{{destination.url}}" class=" btn btn--blue" target="_blank">{{destination.cta}}</a>
+      <a href="{{site.baseurl}}{{destination.url}}" class=" btn btn--blue">{{destination.cta}}</a>
 
 
     </div>

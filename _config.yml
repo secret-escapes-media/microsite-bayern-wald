@@ -1,8 +1,8 @@
 # Site settings
-title: Bayern
+title: Bayerischer Herbst
 client:
-  name: Client Name
-  link: "#client-name"
+  name: Sommerver­längerung in sagenhafter Natur
+  link: "https://www.bavaria.by/"
 core-se-link: https://www.secretescapes.de/aktuelle-angebote
 se-tracking-link: "?utm_source=SE&utm_medium=hub&utm_campaign=bayern_DE_2019"
 description: >
